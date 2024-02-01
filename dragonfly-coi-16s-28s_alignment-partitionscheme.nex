@@ -1,0 +1,12 @@
+#nexus
+begin sets;
+    charset COI_pos1 = 1-747\3;
+    charset COI_pos2 = 2-747\3;
+    charset COI_pos3 = 3-747\3;
+    charset 16S_pos1 = 748-1342\3;
+    charset 16S_pos2 = 749-1342\3;
+	charset 16S_pos3 = 750-1342\3;
+	charset 28S_pos1 = 1450-3673\3;
+    charset 28S_pos2 = 1451-3673\3;
+	charset 28S_pos3 = 1452-3673\3;
+end;
