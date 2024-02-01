@@ -1,0 +1,1 @@
+ iqtree2 -s dragonfly-coi-16s-28s_alignment.phy -p dragonfly-coi-16s-28s_alignment-partitionscheme.nex -B 1000
