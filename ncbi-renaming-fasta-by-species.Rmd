@@ -1,0 +1,28 @@
+---
+title: "Renaming FASTA Sequences"
+author: "Archita Sharma"
+date: "2024-02-16"
+output: html_document
+---
+
+```{r CODE for renaming Fasta name from NCBI dowloaded sequences with species name}
+#install packages
+install.packages("stringr")
+install.packages("phylotools")
+
+#load your csv file with Taxon_name, GenBank Accession number and name (tips in your tree for eg Home_sapiens)
+taxa_name <- read.csv("Taxon-name-coi.csv")
+
+#create vector for new names
+new = taxa_name$name
+current = ape::read.FASTA("coi-dm-sequence.fasta")
+
+# create a dataframe with two columns: one with the current sequence names directly from the FASTA file, and one with the new names you want to change them to, please note the decription column displeyed in geneious will no longer be displayed
+ref = data.frame(matrix(nrow = length(new), ncol = 2))
+ref[,1] = names(current)
+ref[,2] = new
+
+# use the phylotools library to replace the names
+library(phylotools)
+rename.fasta(infile = "coi-dm-sequence.fasta", ref, outfile = "renamed_coi-dm-sequence.fasta")
+```
