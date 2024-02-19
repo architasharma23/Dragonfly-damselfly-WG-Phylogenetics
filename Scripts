@@ -1,1 +1,5 @@
- iqtree2 -s dragonfly-coi-16s-28s_alignment.phy -p dragonfly-coi-16s-28s_alignment-partitionscheme.nex -B 1000
+#Run on cmd
+cd C:/Users/archi/OneDrive/Documents/iqtree-2.2.2.6-Windows/iqtree-2.2.2.6-Windows/bin
+#make sure you keep both .phylip (alignment file) and .nexus (partition scheme) in the bin
+iqtree2 -s dragonfly-coi-16s-28s_alignment.phy -p dragonfly-coi-16s-28s_alignment-partitionscheme.nex -B 1000
+iqtree2 -s coi-16s-28s-dm-muscle-concatenated.phy -p coi-16s-28s-dm-muscle-concatenated.nex -B 1000
